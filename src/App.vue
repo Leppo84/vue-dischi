@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderMenu>
+    </HeaderMenu>
+    <main>
+      <LoadingSplash>
+      </LoadingSplash>
+      <MyCollection>
+      </MyCollection>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderMenu from './components/HeaderMenu.vue'
+import MyCollection from './components/MyCollection.vue'
+import LoadingSplash from './components/LoadingSplash.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderMenu,
+    LoadingSplash,
+    MyCollection,
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
+
+main {
+  background-color: #1e2d3b;
+  text-align: center;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+#app {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
 </style>
