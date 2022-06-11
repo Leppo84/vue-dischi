@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-for="(album, index) in callAlbum" class="album-card" :key="index">
+    <div v-for="(album, index) in callAlbums" class="album-card" :key="index">
         <img :src="album.poster" :alt="album.title">
 
 
@@ -21,10 +21,10 @@ export default {
     }
   },
   created(){
-    this.getAlbums();
+    this.printAlbums();
   },
   methods: {
-    getAlbums(){
+    printAlbums(){
         axios
         .get(this.apiUrl)
         .then(apiLog => {
@@ -34,8 +34,8 @@ export default {
         .catch((error) => {
             console.log("errore", error);
         })
-    }
-  }
+    },
+  },
 }
 
 </script>
@@ -48,7 +48,15 @@ div.container {
     flex-wrap: wrap;
     min-width: 60%;
     height: calc(100vh - 60px);
-    // padding-top: 60px;      
+    // padding-top: 60px;
+    div.album-card {
+        flex-basis: 20%;
+        padding: 10px;
+    
+        img {
+            max-width: 100%;
+        }
+    }
 }
 
 

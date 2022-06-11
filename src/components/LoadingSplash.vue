@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="lds-facebook">
+    <div :class="collectionLoading==='true'?'lds-facebook':''">
         <div>
         </div>
         <div>
@@ -15,7 +15,13 @@
 export default {
   name: 'LoadingSplash',
   props: {
-  }
+      collectionLoading: "",
+    },
+//     data(){
+//     return{
+//       collectionLoading = true,
+//     }
+//   }
 }
 </script>
 

@@ -23,8 +23,14 @@ export default {
     HeaderMenu,
     LoadingSplash,
     MyCollection,
+  },
+  data(){
+    return{
+      collectionLoading : true,
+    }
   }
 }
+
 </script>
 
 <style lang="scss">
@@ -45,6 +51,5 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-
 
 </style>
