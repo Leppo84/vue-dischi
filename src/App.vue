@@ -3,8 +3,6 @@
     <HeaderMenu>
     </HeaderMenu>
     <main>
-      <LoadingSplash>
-      </LoadingSplash>
       <MyCollection>
       </MyCollection>
     </main>
@@ -14,21 +12,19 @@
 <script>
 import HeaderMenu from './components/HeaderMenu.vue'
 import MyCollection from './components/MyCollection.vue'
-import LoadingSplash from './components/LoadingSplash.vue'
 
 
 export default {
   name: 'App',
+    data(){
+    return{
+        collectionLoading : true,
+    }
+  },
   components: {
     HeaderMenu,
-    LoadingSplash,
     MyCollection,
   },
-  data(){
-    return{
-      collectionLoading : true,
-    }
-  }
 }
 
 </script>
