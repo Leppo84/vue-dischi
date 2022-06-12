@@ -62,8 +62,6 @@ export default {
 div.container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     align-content: center;
     max-width: 60%;
     height: calc(100vh - 60px);
@@ -71,18 +69,3 @@ div.container {
 }
 
 </style>
-
-        setTimeout( () => {
-            return true;
-        }, 1000);
-
-
-obj data
-success: true
-response: Array(10)
-0:
-author: "Bon Jovi"
-genre: "Rock"
-poster: "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg"
-title: "New Jersey"
-year: "1988"
