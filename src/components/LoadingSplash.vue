@@ -26,8 +26,6 @@ flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 align-content: center;
-// min-width: 60%;
-// height: calc(100vh - 60px);
 margin: 0 auto; 
 
     .lds-facebook {
