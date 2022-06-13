@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'HeaderMenu',
+  name: 'AlbumCards',
   props: {
     album: Object
   },
@@ -25,6 +25,7 @@ export default {
         display: flex;
         flex-direction: column;
         width: 16%;
+        min-width: 100px;
         // height: 200px;
         padding: 12px;
         margin: 2%;
@@ -50,13 +51,3 @@ export default {
     }
 
 </style>
-
-obj data
-success: true
-response: Array(10)
-0:
-author: "Bon Jovi"
-genre: "Rock"
-poster: "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg"
-title: "New Jersey"
-year: "1988"

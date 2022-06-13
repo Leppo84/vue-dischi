@@ -62,9 +62,10 @@ export default {
 div.container {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    // align-content: center;
+    padding-top: 40px;
     max-width: 60%;
-    height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
     margin: 0 auto;
 }
 

@@ -3,7 +3,9 @@
         <img alt="Spotify logo" src="../assets/Logo Spotify.png">
         <div class="filter-album">
             <span>Seleziona il genere</span>
-            <select name="genre-selector" id="genre-selector">
+            <select v-model="selected" name="genre-selector" id="genre-selector"
+                @click="$emit('filter', selected)"
+                >
                 <option id="opt_all" selected="selected" value="all">All</option>
                 <option id="opt_jazz" value="jazz">Jazz</option>
                 <option id="opt_metal" value="metal">Metal</option>
@@ -15,8 +17,23 @@
 </template>
 
 <script>
+import { emit } from 'process';
+
 export default {
   name: 'HeaderMenu',
+  data(){
+    return{
+        Selected: "",
+    }
+  }
+  methods: {
+    activateFilter() {
+
+        // selettore attivo ???
+        this.inputSelection = selected;
+        $emit("mySelection", this.inputSelection)
+    }
+  }
 }
 </script>
 

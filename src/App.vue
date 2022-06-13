@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderMenu>
+    <HeaderMenu @filter="filterAlbums">
     </HeaderMenu>
     <main>
       <MyCollection>
