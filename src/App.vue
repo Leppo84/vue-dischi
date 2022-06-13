@@ -5,7 +5,7 @@
     </HeaderMenu>
     <main>
       <!-- <MyCollection :filtered="filterAlbums"> -->
-      <MyCollection :genre="wantedGenre">
+      <MyCollection :myGenre="wantedGenre">
       </MyCollection>
     </main>
   </div>
@@ -21,7 +21,7 @@ export default {
     data(){
     return{
         collectionLoading : true,
-        wantedGenre : "all",
+        wantedGenre : "All",
     }
   },
   components: {
@@ -50,6 +50,8 @@ main {
   text-align: center;
   width: 100%;
   height: calc(100vh - 60px);
+  overflow: auto;
+
 }
 
 #app {

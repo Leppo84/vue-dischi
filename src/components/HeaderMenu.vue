@@ -5,11 +5,11 @@
             <span>Seleziona il genere</span>
             <select v-model="selected" name="genre-selector" id="genre-selector"
                 @click="$emit('inputReceived', selected)">
-                <option id="opt_all" selected="selected" value="all">All</option>
-                <option id="opt_jazz" value="jazz">Jazz</option>
-                <option id="opt_metal" value="metal">Metal</option>
-                <option id="opt_pop" value="pop">Pop</option>
-                <option id="opt_Rock" value="rock">Rock</option>
+                <option id="opt_all" selected="selected" value="All">All</option>
+                <option id="opt_jazz" value="Jazz">Jazz</option>
+                <option id="opt_metal" value="Metal">Metal</option>
+                <option id="opt_pop" value="Pop">Pop</option>
+                <option id="opt_Rock" value="Rock">Rock</option>
             </select>
         </div>
     </header>
