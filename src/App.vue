@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <HeaderMenu @filter="filterAlbums">
+    <HeaderMenu @inputReceived="selectedValue">
+    {{wantedGenre}}
     </HeaderMenu>
     <main>
-      <MyCollection>
+      <!-- <MyCollection :filtered="filterAlbums"> -->
+      <MyCollection :genre="wantedGenre">
       </MyCollection>
     </main>
   </div>
@@ -19,12 +21,19 @@ export default {
     data(){
     return{
         collectionLoading : true,
+        wantedGenre : "all",
     }
   },
   components: {
     HeaderMenu,
     MyCollection,
   },
+  methods: {
+    selectedValue(selectedGenre) {
+      this.wantedGenre = selectedGenre
+      // console.log(selectedGenre);
+    }
+  }
 }
 
 </script>

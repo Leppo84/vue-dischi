@@ -1,5 +1,6 @@
 <template>
   <div>      
+    {{genre}}
     <LoadingSplash v-if="collectionLoading">
     </LoadingSplash>
     <div v-else class="container">
@@ -18,6 +19,9 @@ import LoadingSplash from "./LoadingSplash.vue";
 
 export default {
   name: 'MyCollection',
+    props: {
+    genre: String,
+  },
   components: {
     AlbumCard,
     LoadingSplash
@@ -44,8 +48,12 @@ export default {
             console.log("errore", error);
         })
     },
-    printAlbums(){
-    }
+    // filterAlbums(){
+    //   if (genre != "all") {
+    //     console.log(genre)
+        
+    //   }
+    // }
   },
   mounted(){
         setTimeout(()=> {
@@ -70,3 +78,6 @@ div.container {
 }
 
 </style>
+
+    <!-- printAlbums(){
+    } -->
