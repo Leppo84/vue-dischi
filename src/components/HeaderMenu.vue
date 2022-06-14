@@ -4,7 +4,7 @@
         <div class="filter-album">
             <span>Seleziona il genere</span>
             <select v-model="selected" name="genre-selector" id="genre-selector"
-                @click="$emit('inputReceived', selected)">
+                @change="$emit('inputReceived', selected)">
                 <option id="opt_all" selected="selected" value="All">All</option>
                 <option id="opt_jazz" value="Jazz">Jazz</option>
                 <option id="opt_metal" value="Metal">Metal</option>
